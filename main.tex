@@ -87,13 +87,13 @@
 }
 %%% Title %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 {\sf\bf
-	Agro-ecological Solutions
+	Sustainable, Multifunctional Ag Landscapes % Agroecology and policy instruments for s
 }
 
 %%% Authors %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 {
-	\vspace{1em} Corentin Barbu, Vincent , Jeff Norville\\
-	{\smaller legendi@inf.elte.hu, lgulyas@colbud.hu, gkampis@colbud.hu}
+	\vspace{1em} Corentin Barbu, Vincent Martinet, Jeff Norville\\
+	{\smaller corentin.barbu@inra.fr, vincent.martinet@inra.fr, jeffrey.norville@inra.fr}
 }
 %%% Logo %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 {
@@ -102,7 +102,7 @@
 \setlength\fboxsep{0pt}
 \setlength\fboxrule{0.5pt}
 	\fbox{
-		\begin{minipage}{14em}
+		\begin{minipage}{15em}
 			\includegraphics[width=8em,height=4em]{grassland-prairie_Bourgogne.png}
 			%\includegraphics[width=4em,height=4em]{grassland-prairie_Picardie.png} \\
 			%\includegraphics[width=10em,height=4em]{grassland-prairie_MP.png}
@@ -112,9 +112,8 @@
 }
 
 \headerbox{Problem}{name=problem,column=0,row=0}{
-Sampling networks always involves the act of aggregation (e.g., when collecting longitudinal samples of networks). We sutdy how the cumulation window length effects the properties of the aggregated network.
-
-\includegraphics[width=\linewidth]{time_windows}
+Of France's 20 million hectares (ha), about half are useful agricultural (ag) land. Of this .
+\includegraphics[width=0.99\linewidth]{grassland-prairie_Picardie.png}
 }
 
 \headerbox{Basic Concepts}{name=definitions,column=0,below=problem}{
@@ -127,14 +126,14 @@ as the \textbf{cumulative network}.
 
 
 \headerbox{Models}{name=models,column=0,below=definitions}{
-\textbf{ER1} $G_0$ is a random graph. Add each non-existing edge with $p_A$, delete each existing edge with $p_D$ probability. \\
-\textbf{ER2} $G_0$ is a random graph. Add $k_A$ uniformly selected random new edges and delete $k_D$ existing edges. \\
-\textbf{ER3} $G_0$ is a random graph. Rewire $k_{RW}$ edges. \\
+\textbf{Economy} $G_0$ is a random graph. Add each non-existing edge with $p_A$, delete each existing edge with $p_D$ probability. \\
+\textbf{Economy} $AROPAj$ is an economic-optimization model based on FADN data. \\
+\textbf{Agronomy} $unnamed$ is a linear model based on Lasso and GLM  \\
 \textbf{SPA} (\emph{Snapshot preferential}) $G_0$ is a scale free network. Add $k_A$ edges from a random node with preferential attachment based on the snapshot network. Delete $k_D$ existing edges. \\
 \textbf{CPA} (\emph{Cumulative preferential}) $G_0$ is a scale free network. Add $k_A$ edges from a random node with preferential attachment based on the cumulative network. Delete $k_D$ existing edges.
 }
-
-\headerbox{References}{name=references,column=0,below=models}{
+% above=models
+\headerbox{References}{name=references,column=2,row=3,above=acknowledgements}{
 \smaller													% Make the whole text smaller
 \vspace{-0.4em} 										% Save some space at the beginning
 \bibliographystyle{plain}							% Use plain style
@@ -148,17 +147,17 @@ as the \textbf{cumulative network}.
 \end{thebibliography}
 }
 
-\headerbox{Acknowledgements}{name=acknowledgements,column=0,below=references, above=bottom}{
+% , above=bottom
+\headerbox{Acknowledgements}{name=acknowledgements,column=2,below=references}{
 \smaller						% Make the whole text smaller
 \vspace{-0.4em}			% Save some space at the beginning
 This research was partially supported by the Hungarian Government (KMOP-1.1.2-08/1-2008-0002 ) and the European Union's Seventh Framework Programme: DynaNets, FET-Open project no. FET-233847 (\url{http://www.dynanets.org}). The supports are gratefully acknowledged.
 } 
 
-\headerbox{Dynamic Networks are Sensitive to Aggregation}{name=density,span=2,column=1,row=0}{
-Network characteristics are extremely sensitive to minor changes in aggregation length. In our previous work \cite{prevWork1} \cite{prevWork2}, we studied the cumulative properties of Elementary Dynamic Network models over the complete time period (i.e., until they reach the stable point of a full network). Here we focus on the more realistc domain of sparse (cumulative) networks. We find that even when snapshot networks are stationary, \textbf{important network characteristics}  (average path lenght, clustering, betwenness centrality) \textbf{are extremely sensitive to aggregation} (window length). 
+\headerbox{Dynamic Networks are Sensitive to Aggregation}{name=density,span=1,column=1,row=0}{
+Network characteristics are extremely sensitive to minor changes in aggregation length. In our previous work \cite{prevWork1} \cite{prevWork2}, we studied the cumulative properties of Elementary Dynamic Network models over the complete time period (i.e., until they reach the stable point of a full network). Here we focus on the more realistc domain of sparse (cumulative) networks. We find that even when snapshot networks are stationary, \textbf{important network characteristics}  (average path length, clustering, betwenness centrality) \textbf{are extremely sensitive to aggregation} (window length). 
+\includegraphics[angle=0,width=0.8\linewidth]{grassland_overlap_SAU.png}}
 
-\includegraphics[angle=0,width=0.98\linewidth]{grassland_overlap_SAU.png}}
-}
 
 \headerbox{Degree Distribution Radically Changes}
 {name=degreeDistribution,span=2,column=1,below=density,above=bottom}{
@@ -170,14 +169,18 @@ Degree distributions are exceptionally sensitive to the length of the aggregatio
 %\end{center}
 %\vspace{-0.2em}
 
-Taking slices of the cumulative 3D charts shows us how the degree distribution changes. The log-log charts below show the progression of these changes as the aggregation window gets larger.
 \vspace{-0.2em}
+
+\headerbox{Col 3 Talking About Tradeoffs}{name=density,span=1,column=2}{
+Network characteristics are extremely sensitive to minor changes in aggregation length. In our previous work \cite{prevWork1} \cite{prevWork2}, we studied the cumulative properties of Elementary Dynamic Network models over the complete time period (i.e., until they reach the stable point of a full network). Here we focus on the more realistc domain of sparse (cumulative) networks. We find that even when snapshot networks are stationary, \textbf{important network characteristics}  (average path length, clustering, betweeness centrality) \textbf{are extremely sensitive to aggregation} (window length). 
+\includegraphics[angle=0,width=0.8\linewidth]{grassland_overlap_SAU.png}}
+
 \begin{center}
-	\includegraphics[angle=0,width=0.49\linewidth]{ilots_cult.png}}
-	\includegraphics[angle=-90,width=0.49\linewidth]{CPA_cumulativeDegrees}
+	\includegraphics[angle=0,width=0.49\linewidth]{ilots_cult.png}
+%	\includegraphics[angle=-90,width=0.49\linewidth]{CPA_cumulativeDegrees}
 \end{center}
 }
 
 
-\end{poster}
+\end{poster}%
 \end{document}
